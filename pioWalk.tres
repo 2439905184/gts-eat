@@ -1,0 +1,51 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+
+resource_name = "default"
+length = 0.833333
+loop = false
+step = 0.1
+tracks/0/type = "transform"
+tracks/0/path = NodePath("body_001:body")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = false
+tracks/0/keys = PoolRealArray( 0, 1, 2.98023e-008, 7.15256e-007, -9.31323e-009, 0.090851, 0, 0, 0.995865, 1, 1, 1, 0.416667, 1, 2.98023e-008, 7.15256e-007, -9.31323e-009, 0.228828, 0, 0, 0.973467, 1, 1, 1, 0.833333, 1, 2.98023e-008, 7.15256e-007, -9.31323e-009, 0, 0, 0, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("body_001:foot_L")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0.0416666, 1, 2.98023e-008, 9.53674e-007, 5.96046e-008, -9.02603e-009, -6.51926e-009, 4.54747e-013, 1, 1, 1, 1, 0.416667, 1, 2.98023e-008, 9.53674e-007, 5.96046e-008, -0.226639, -2.10982e-006, 0.00840504, 0.973942, 1, 1, 1, 0.833333, 1, 2.98023e-008, 9.53674e-007, 5.96046e-008, 0.291397, 2.69746e-006, -0.0108066, 0.956541, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("body_001:foot_R")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0.0416666, 1, -8.9407e-008, 9.53674e-007, -4.47035e-008, 2.65804e-008, 1.62981e-008, 1.05274e-010, 1, 1, 1, 1, 0.416667, 1, -8.9407e-008, 9.53674e-007, -4.47035e-008, 0.515553, -7.59689e-006, 0.00253441, 0.856854, 1, 1, 1, 0.833333, 1, -8.9407e-008, 9.53674e-007, -4.47035e-008, -0.21605, 3.20456e-006, -0.00106208, 0.976382, 1, 1, 1 )
+tracks/3/type = "transform"
+tracks/3/path = NodePath("body_001:hand_L")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/keys = PoolRealArray( 0.0416666, 1, -5.96046e-008, -3.72529e-008, -5.96046e-008, 6.10623e-015, -1.02445e-008, 5.68434e-014, 1, 1, 1, 1, 0.416667, 1, -5.96046e-008, -3.72529e-008, -5.96046e-008, 0.466027, 9.20381e-007, -0.0011794, 0.88477, 1, 1, 1, 0.833333, 1, -5.96046e-008, -3.72529e-008, -5.96046e-008, -0.174295, -3.70931e-007, 0.000441106, 0.984693, 1, 1, 1 )
+tracks/4/type = "transform"
+tracks/4/path = NodePath("body_001:hand_R")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/keys = PoolRealArray( 0.0416666, 1, 8.34465e-007, 4.47035e-008, 8.9407e-008, -5.52738e-011, 1.16415e-009, -4.65065e-010, 1, 1, 1, 1, 0.416667, 1, 8.34465e-007, 4.47035e-008, 8.9407e-008, -0.313981, 5.48097e-008, -0.00302136, 0.949425, 1, 1, 1, 0.833333, 1, 8.34465e-007, 4.47035e-008, 8.9407e-008, 0.0358106, 1.46777e-008, 0.000344598, 0.999359, 1, 1, 1 )
+tracks/5/type = "transform"
+tracks/5/path = NodePath("body_001:head")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = true
+tracks/5/enabled = false
+tracks/5/keys = PoolRealArray( 0.0416666, 1, 0, 0, 4.76837e-007, 0, 0, 0, 1, 1, 1, 1, 0.833333, 1, 0, 0, 4.76837e-007, 0, 0, 0, 1, 1, 1, 1 )
+
