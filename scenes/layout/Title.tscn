@@ -1,0 +1,137 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scenes/layout/Title.gd" type="Script" id=1]
+[ext_resource path="res://images/QQ图片20190326134244.jpg" type="Texture" id=2]
+[ext_resource path="res://fonts/SIMLI.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://startgame.gd" type="Script" id=4]
+[ext_resource path="res://scenes/layout/mulit.gd" type="Script" id=5]
+[ext_resource path="res://fonts/font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://scenes/layout/设置语言/language.gd" type="Script" id=7]
+[ext_resource path="res://scenes/layout/mod.gd" type="Script" id=8]
+[ext_resource path="res://scenes/layout/设置语言/back.gd" type="Script" id=9]
+[ext_resource path="res://scenes/sounds/sound.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/layout/set.gd" type="Script" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 515.536, 300 )
+scale = Vector2( 1.51313, 1.17647 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 451.43
+margin_top = 140.913
+margin_right = 661.43
+margin_bottom = 265.913
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "gts eat
+"
+align = 1
+valign = 1
+
+[node name="solo" type="Button" parent="."]
+margin_left = 306.0
+margin_top = 240.0
+margin_right = 572.0
+margin_bottom = 308.0
+custom_fonts/font = SubResource( 2 )
+text = "单人游戏"
+script = ExtResource( 4 )
+
+[node name="mulit" type="Button" parent="."]
+margin_left = 311.361
+margin_top = 338.507
+margin_right = 571.361
+margin_bottom = 407.507
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+text = "多人游戏"
+script = ExtResource( 5 )
+
+[node name="language" type="Button" parent="."]
+margin_left = 662.333
+margin_top = 346.205
+margin_right = 880.333
+margin_bottom = 413.205
+custom_fonts/font = ExtResource( 6 )
+text = "language"
+script = ExtResource( 7 )
+
+[node name="mod" type="Button" parent="."]
+margin_left = 306.0
+margin_top = 424.0
+margin_right = 572.0
+margin_bottom = 500.0
+custom_fonts/font = ExtResource( 6 )
+text = "Mod"
+script = ExtResource( 8 )
+
+[node name="Panel" type="Panel" parent="."]
+editor/display_folded = true
+visible = false
+margin_left = 160.0
+margin_top = 70.0
+margin_right = 980.0
+margin_bottom = 530.0
+
+[node name="Vbox" type="VBoxContainer" parent="Panel"]
+margin_left = 230.0
+margin_top = 80.0
+margin_right = 470.0
+margin_bottom = 173.0
+
+[node name="chinese" type="CheckButton" parent="Panel/Vbox"]
+margin_right = 240.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 6 )
+text = "简体中文"
+
+[node name="english" type="CheckButton" parent="Panel/Vbox"]
+margin_top = 53.0
+margin_right = 240.0
+margin_bottom = 102.0
+custom_fonts/font = ExtResource( 6 )
+text = "English"
+
+[node name="back" type="Button" parent="Panel"]
+margin_left = 240.0
+margin_top = 270.0
+margin_right = 510.0
+margin_bottom = 370.0
+custom_fonts/font = ExtResource( 6 )
+text = "返回"
+script = ExtResource( 9 )
+
+[node name="sound" parent="." instance=ExtResource( 10 )]
+
+[node name="set" type="Button" parent="."]
+margin_left = 310.0
+margin_top = 510.0
+margin_right = 571.0
+margin_bottom = 570.0
+custom_fonts/font = ExtResource( 6 )
+text = "设置"
+script = ExtResource( 11 )
+[connection signal="button_down" from="solo" to="solo" method="_on_Button_button_down"]
+[connection signal="button_down" from="mulit" to="mulit" method="_on_mulit_button_down"]
+[connection signal="button_down" from="language" to="language" method="_on_language_button_down"]
+[connection signal="button_down" from="mod" to="mod" method="_on_mod_button_down"]
+[connection signal="button_down" from="Panel/back" to="Panel/back" method="_on_back_button_down"]
+[connection signal="button_down" from="set" to="set" method="_on_set_button_down"]
+[connection signal="pressed" from="set" to="set" method="_on_set_pressed"]

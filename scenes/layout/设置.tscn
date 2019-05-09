@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://fonts/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/layout/CheckButton.gd" type="Script" id=2]
+[ext_resource path="res://scenes/layout/back.gd" type="Script" id=3]
+[ext_resource path="res://scenes/layout/update.gd" type="Script" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 220.0
+margin_top = 90.0
+margin_right = 420.0
+margin_bottom = 131.0
+custom_fonts/font = ExtResource( 1 )
+text = "鼠标灵敏度"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 430.0
+margin_top = 100.0
+margin_right = 488.0
+margin_bottom = 124.0
+hint_tooltip = "请输入数字"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 500.0
+margin_top = 100.0
+margin_right = 630.0
+margin_bottom = 130.0
+custom_fonts/font = ExtResource( 1 )
+text = "确定"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 720.0
+margin_top = 210.0
+margin_right = 880.0
+margin_bottom = 251.0
+custom_fonts/font = ExtResource( 1 )
+text = "←制作中"
+
+[node name="Check_SFX" type="CheckButton" parent="."]
+margin_left = 210.0
+margin_top = 140.0
+margin_right = 380.0
+margin_bottom = 180.0
+custom_fonts/font = ExtResource( 1 )
+pressed = true
+text = "音效"
+script = ExtResource( 2 )
+
+[node name="Check_bgm" type="CheckButton" parent="."]
+margin_left = 210.0
+margin_top = 190.0
+margin_right = 370.0
+margin_bottom = 239.0
+custom_fonts/font = ExtResource( 1 )
+pressed = true
+text = "音乐"
+script = ExtResource( 2 )
+
+[node name="back" type="Button" parent="."]
+margin_left = 310.0
+margin_top = 370.0
+margin_right = 550.0
+margin_bottom = 430.0
+custom_fonts/font = ExtResource( 1 )
+text = "返回"
+script = ExtResource( 3 )
+
+[node name="update" type="Button" parent="."]
+margin_left = 220.0
+margin_top = 239.0
+margin_right = 400.0
+margin_bottom = 280.0
+custom_fonts/font = ExtResource( 1 )
+text = "检查更新"
+script = ExtResource( 4 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+[connection signal="toggled" from="Check_SFX" to="Check_SFX" method="_on_CheckButton_toggled"]
+[connection signal="toggled" from="Check_bgm" to="Check_bgm" method="_on_Check_bgm_toggled"]
+[connection signal="pressed" from="back" to="back" method="_on_back_pressed"]
+[connection signal="pressed" from="update" to="update" method="_on_update_pressed"]
